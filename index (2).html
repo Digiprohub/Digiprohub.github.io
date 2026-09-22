@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DigiProHub — Digital systems for small businesses</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Yatra+One&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+  :root{
+    --maroon:#6B1E2A;
+    --maroon-deep:#4A141C;
+    --gold:#E3A93B;
+    --ink:#241512;
+    --paper:#F3ECDD;
+    --cream:#FBF3E4;
+    --line:#DED2B4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Work Sans',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .display{font-family:'Yatra One',cursive;}
+  a{color:inherit;}
+  img{max-width:100%;}
+
+  /* Nav */
+  nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 6vw;
+  }
+  .brand{font-family:'Yatra One',cursive;font-size:1.4rem;color:var(--maroon);}
+  nav a.contact-link{
+    font-size:.9rem;font-weight:600;
+    border:1.5px solid var(--ink);border-radius:30px;
+    padding:8px 18px;text-decoration:none;
+  }
+
+  /* Hero */
+  .hero{
+    background:var(--maroon);
+    color:var(--cream);
+    padding:8vw 6vw 9vw;
+  }
+  .hero-inner{max-width:760px;}
+  .hero h1{
+    font-family:'Yatra One',cursive;
+    font-size:clamp(2.4rem,6vw,4.2rem);
+    line-height:1.15;
+    color:var(--cream);
+  }
+  .hero .accent{color:var(--gold);}
+  .hero p{
+    margin-top:24px;
+    font-size:1.15rem;
+    max-width:520px;
+    color:#E9D8C4;
+  }
+  .hero-cta{
+    margin-top:36px;
+    display:flex;gap:16px;flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:6px;
+    font-weight:600;
+    text-decoration:none;
+    font-size:1rem;
+  }
+  .btn-gold{background:var(--gold);color:var(--maroon-deep);}
+  .btn-outline{border:1.5px solid var(--cream);color:var(--cream);}
+
+  /* Sections */
+  section{padding:70px 6vw;max-width:980px;margin:0 auto;}
+  .eyebrow{
+    font-size:.85rem;color:var(--maroon);font-weight:600;
+  }
+  h2{
+    font-family:'Yatra One',cursive;
+    font-size:clamp(1.8rem,3.5vw,2.6rem);
+    margin-top:10px;
+    color:var(--ink);
+  }
+  .section-intro{max-width:560px;margin-top:14px;color:#4A3A33;}
+
+  /* Services */
+  .services{margin-top:44px;}
+  .service-row{
+    display:flex;gap:28px;
+    padding:26px 0;
+    border-top:1px solid var(--line);
+  }
+  .service-row:last-child{border-bottom:1px solid var(--line);}
+  .service-num{
+    font-family:'Yatra One',cursive;
+    font-size:1.4rem;color:var(--gold);
+    -webkit-text-stroke:1px var(--maroon);
+    min-width:44px;
+  }
+  .service-row h3{font-size:1.25rem;margin-bottom:6px;}
+  .service-row p{color:#4A3A33;max-width:520px;}
+
+  /* Portfolio */
+  .portfolio-card{
+    margin-top:40px;
+    background:var(--ink);
+    color:var(--cream);
+    border-radius:12px;
+    padding:44px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .portfolio-card .tag{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--maroon-deep);
+    font-size:.78rem;font-weight:700;
+    padding:4px 12px;border-radius:20px;
+    margin-bottom:14px;
+  }
+  .portfolio-card h3{font-family:'Yatra One',cursive;font-size:1.6rem;max-width:420px;}
+  .portfolio-card p{margin-top:12px;color:#D8CBBB;max-width:420px;}
+  .portfolio-card .btn-gold{margin-top:22px;}
+
+  /* Contact */
+  .contact-box{
+    margin-top:36px;
+    background:var(--cream);
+    border:1.5px solid var(--line);
+    border-radius:12px;
+    padding:40px;
+  }
+  .contact-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:16px 0;border-top:1px solid var(--line);
+    flex-wrap:wrap;gap:8px;
+  }
+  .contact-row:first-child{border-top:none;}
+  .contact-label{font-weight:600;color:var(--maroon);}
+  .contact-row a{text-decoration:none;font-weight:600;}
+
+  footer{
+    text-align:center;padding:30px 6vw 40px;
+    font-size:.85rem;color:#8A7A6B;
+  }
+
+  @media(max-width:640px){
+    .hero{padding-top:14vw;padding-bottom:14vw;}
+    .portfolio-card{padding:28px;}
+    section{padding:50px 6vw;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">DigiProHub</div>
+  <a class="contact-link" href="#contact">Get in touch</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>We build the <span class="accent">digital counter</span><br>for your business.</h1>
+    <p>Booking systems, simple websites and everyday digital tools — built for homestays, shops and small businesses across India. No jargon, no bloated software, just what you need to run smoothly.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#portfolio">See a live example</a>
+      <a class="btn btn-outline" href="#contact">Start a project</a>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="eyebrow">What we do</div>
+  <h2>Built for how small businesses actually work</h2>
+  <p class="section-intro">Every business is run a little differently. We build tools that fit into how you already work, instead of asking you to change everything.</p>
+
+  <div class="services">
+    <div class="service-row">
+      <div class="service-num">1</div>
+      <div>
+        <h3>Booking Systems</h3>
+        <p>For homestays, guesthouses and rental properties — guests book online, pay via UPI, and you manage everything from one simple dashboard.</p>
+      </div>
+    </div>
+    <div class="service-row">
+      <div class="service-num">2</div>
+      <div>
+        <h3>Business Websites</h3>
+        <p>A clean, working website for your shop, service or homestay — built to load fast and work well on phones, where most of your customers are.</p>
+      </div>
+    </div>
+    <div class="service-row">
+      <div class="service-num">3</div>
+      <div>
+        <h3>Ongoing Support</h3>
+        <p>Once it's live, we're still around — adding rooms, fixing small issues, or helping you make changes as your business grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="eyebrow">Recent work</div>
+  <h2>A homestay booking system, built from scratch</h2>
+  <p class="section-intro">Guests browse rooms, check real-time availability, pay via UPI and get instant confirmation. The owner manages bookings, rooms and payments from one admin panel — no technical knowledge required.</p>
+
+  <div class="portfolio-card">
+    <div>
+      <span class="tag">Live demo</span>
+      <h3>Mountain Homestay — Booking System</h3>
+      <p>Room browsing, date-based availability, UPI payments with screenshot verification, automatic email invoices, and a full admin dashboard.</p>
+    </div>
+    <a class="btn btn-gold" href="#" target="_blank">View the demo &rarr;</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="eyebrow">Let's talk</div>
+  <h2>Tell us about your business</h2>
+  <p class="section-intro">Reach out on WhatsApp for the fastest reply, or drop an email — we'll get back to you within a day.</p>
+
+  <div class="contact-box">
+    <div class="contact-row">
+      <span class="contact-label">WhatsApp</span>
+      <a href="https://wa.me/910000000000" target="_blank">+91 00000 00000</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">Email</span>
+      <a href="mailto:hello@digiprohub.in">hello@digiprohub.in</a>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 2026 DigiProHub. Built for small businesses, one system at a time.</footer>
+
+</body>
+</html>
